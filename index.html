@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Self Driving Car</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<style></style>
+<body>
+    <canvas id="roadCanvas"></canvas>
+    <div class="controls">
+        <span class="label" id="currentInfo"></span>
+        <button title="Save brain and restart" onclick="save()">💾</button>
+        <button title="Discard brain and restart" onclick="discard()">🗑</button>
+        <button title="Restart without saving" onclick="location.reload()">🌀</button>
+        <div class="label">
+            <h4>Mutation Amount</h4>
+            <button onclick="decreaseAmount()">➖</button>
+            <span id="nextAmount"></span>
+            <button onclick="increaseAmount()">➕</button>
+        </div>
+        <label class="label">
+            <input type=checkbox id="autosaveLeaderCheckbox"/>
+            Autosave Leader
+        </label>
+    </div>
+    <canvas id="networkCanvas"></canvas>
+    <script defer src="brain_jar.js"></script>
+    <script defer src="visualizer.js"></script>
+    <script defer src="network.js"></script>
+    <script defer src="constants.js"></script>
+    <script defer src="sensor.js"></script>
+    <script defer src="utils.js"></script>
+    <script defer src="road.js"></script>
+    <script defer src="controls.js"></script>
+    <script defer src="car.js"></script>
+    <script defer src="main.js"></script>
+</body>
+</html>

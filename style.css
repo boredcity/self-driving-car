@@ -1,0 +1,64 @@
+:root {
+    --clr-grey: #D3D3D3;
+    --clr-aqua: #114B5F;
+    --clr-red: #6B2737;
+    --clr-green: #659157;
+    --clr-brown: #916953;
+    --clr-black: #232323;
+    --clr-danger: #f6511d;
+    --clr-warning: #957FEF;
+    --clr-player-car: #169873;
+}
+
+body {
+    margin: 0;
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+}
+
+.controls {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+.controls > button {
+    font-size: 40px;
+    border: none;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 2px;
+    cursor: pointer;
+}
+
+#networkCanvas {
+    background-color: black;
+}
+
+.controls > button:hover {
+    opacity: .7;
+}
+
+.label {
+    text-align: center;
+    margin-top: 20px;
+}
+
+#currentInfo {
+    white-space: pre-wrap;
+}
+
+#roadCanvas {
+  animation-name: loop-scenery;
+  animation-duration: 300s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes loop-scenery {
+    0% { background-color: var(--clr-green);}
+    33% { background-color: var(--clr-brown);}
+    66% { background-color: var(--clr-aqua);}
+    100% { background-color: var(--clr-green);}
+}
